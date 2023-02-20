@@ -306,7 +306,7 @@ const Navigation = () => {
       </MobileNavContainer>
       <Nav className={`${scrolledTop ? 'top' : 'scrolled'}`}>
    
-        <NavLink onClick={() => updateOpenNav(false)}   to="/" style={{ transitionDelay: `${openNav ? '100ms' : '250ms'}` }} >
+        {/* <NavLink onClick={() => updateOpenNav(false)}   to="/" style={{ transitionDelay: `${openNav ? '100ms' : '250ms'}` }} > */}
         <Logo color={scrolledTop ? (openNav ? theme.colors.dark : theme.colors.light) : theme.colors.dark} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
      
         
@@ -314,7 +314,7 @@ const Navigation = () => {
     
     
     </Logo>
-    </NavLink>
+    {/* </NavLink> */}
  
 
         <NavButton
