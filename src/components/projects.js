@@ -62,19 +62,19 @@ const ProjectGrid = styled.div`
 // `
 
 const Projects = ({ data }) => {
-  const revealRefs = [];
+  // const revealRefs = [];
 
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    const revealConfig = theme.scrollRevealConfig;
-    revealConfig.afterReveal = (el) => {
-      el.style.transform = "";
-      el.style.transition = "";
-    };
+  // useEffect(() => {
+   
+  //   const revealConfig = theme.scrollRevealConfig;
+  //   revealConfig.afterReveal = (el) => {
+  //     el.style.transform = "";
+  //     el.style.transition = "";
+  //   };
 
-    revealRefs.forEach((ref) => ScrollReveal().reveal(ref, revealConfig));
-  }, [revealRefs]);
+  //   revealRefs.forEach((ref) => ScrollReveal().reveal(ref, revealConfig));
+  // }, [revealRefs]);
 
 
 
@@ -96,8 +96,7 @@ const Projects = ({ data }) => {
                   <FeaturedProject
                     {...project}
                     key={project.title}
-                    ref={(ref) => (revealRefs[i] = ref)
-                    }
+                    // ref={(ref) => (revealRefs[i] = ref)}
                   />
                 );
               }
@@ -105,8 +104,7 @@ const Projects = ({ data }) => {
                 <Project
                   {...project}
                   key={project.title}
-                  ref={(ref) => (revealRefs[i] = ref)
-                  }
+                  // ref={(ref) => (revealRefs[i] = ref)}
                 />
               );
             })}
