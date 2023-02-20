@@ -74,7 +74,7 @@ const Projects = ({ data }) => {
     };
 
     revealRefs.forEach((ref) => ScrollReveal().reveal(ref, revealConfig));
-  }, []);
+  }, [revealRefs]);
 
 
 
