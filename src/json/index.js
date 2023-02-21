@@ -17,7 +17,7 @@ export const info = {
 };
 
 export const formationPage = {
-  title: "Formation & Certifications.",
+  title: "Formation & Certificates.",
   subTitle: "Discover What I've Achieved and Where I've Studied",
 };
 
