@@ -48,7 +48,7 @@ const FormationCertifs = (props) => {
       
 
       <Container>
-        <Title >Certifications.</Title>
+        <Title >Certificates.</Title>
         <FormationCertifsContainer>
           {
             props.certifications.map((certif, i) => {
