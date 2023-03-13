@@ -81,14 +81,11 @@ const Header = ({ data, headsData, scrollDown }) => {
   useEffect(() => {
     setTimeout(() => setIsMounted(true), 1000);
 
-
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
-
 
   const handleScroll = () => {
     if (window.scrollY > 50) {
@@ -121,7 +118,6 @@ const Header = ({ data, headsData, scrollDown }) => {
     </Link>
   );
   const items = [one, two, three, linkHome];
-
 
   return (
     <>
