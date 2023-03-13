@@ -70,9 +70,8 @@ const MobileNavOverlay = styled.div`
 `
 
 const MobileNav = styled.div`
-  // max-height: 525px;
+  max-height: 525px;
   // max-height: 100%;
-  height:100vh
   width: 100vw;
   transform: translateY(-100vh);
   background-color: ${theme.colors.light};
