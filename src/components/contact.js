@@ -188,7 +188,7 @@ const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
-  const [email, setEmail] = useState("hello@semlali.tech");
+  const [email, setEmail] = useState("contact@othmansemlali.com");
   const [isEmailCopied, setIsEmailCopied] = useState(false);
 
 
