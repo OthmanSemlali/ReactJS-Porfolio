@@ -221,7 +221,7 @@ const Contact = () => {
 
   const handleEmailMouseLeave = () => {
     if (isEmailCopied) {
-      setEmail("hello@semlali.tech");
+      setEmail("contact@othmansemlali.com");
       setIsEmailCopied(false);
     }
   };
