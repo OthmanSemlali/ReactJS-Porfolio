@@ -89,6 +89,15 @@ export const formations = [
 
 export const certifications = [
   {
+    title: "Learn Node.js Course",
+    dates: "August 2023",
+    organism: "Codecademy",
+    copy: null,
+    link: "https://www.codecademy.com/profiles/othmansemlali/certificates/240305d50b925c17868f1ac7a21a3261",
+    skills: ["Node.js"],
+    open: true,
+  },
+  {
     title: "Agile with Atlassian Jira",
     dates: "July 2023",
     organism: "Atlasian",
@@ -102,6 +111,15 @@ export const certifications = [
       "Agile Methodologies",
     ],
     open: true,
+  },
+  {
+    title: "Learn Git & GitHub Course",
+    dates: "July 2023",
+    organism: "Codecademy",
+    copy: null,
+    link: "https://www.codecademy.com/profiles/othmansemlali/certificates/a8ab218d5950c29861635cc0bf12fd13",
+    skills: ["Git", "Github"],
+    open: false,
   },
   {
     title: "Learn MongoDB Course",
@@ -142,15 +160,15 @@ export const certifications = [
     skills: ["Office Word 2016"],
     open: false,
   },
-  {
-    title: "PHP et MySQL la formation ULTIME",
-    dates: "March 2022",
-    organism: "Udemy",
-    copy: null,
-    link: "https://www.udemy.com/certificate/UC-ce794788-ddb2-4140-aa8b-154ebae1058c/",
-    skills: ["PHP", "MySQL"],
-    open: false,
-  },
+  // {
+  //   title: "PHP et MySQL la formation ULTIME",
+  //   dates: "March 2022",
+  //   organism: "Udemy",
+  //   copy: null,
+  //   link: "https://www.udemy.com/certificate/UC-ce794788-ddb2-4140-aa8b-154ebae1058c/",
+  //   skills: ["PHP", "MySQL"],
+  //   open: false,
+  // },
 ];
 
 export const ErrorData = {
