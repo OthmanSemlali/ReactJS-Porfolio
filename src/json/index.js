@@ -78,7 +78,7 @@ export const formations = [
     open: true,
   },
   {
-    school: " ISTA NTIC2",
+    school: " Specialized Institute Of Applied Technology NTIC 2",
     dates: "2021 — 2023",
     // position: "My position",
     copy: "The OFPPT Institute is a renowned technical and professional training institution in Morocco that offers a range of programs. I was honored to be a part of the Full Stack Web Development option as a full stack web developer. During my time at the OFPPT Institute, I deepened my knowledge and understanding of web development, and sharpened my skills in both back-end programming and front-end programming, as well as in agile methodologies and design tools.",
