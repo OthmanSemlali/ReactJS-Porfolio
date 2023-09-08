@@ -91,7 +91,7 @@ export const certifications = [
   {
     title: "Agile with Atlassian Jira",
     dates: "July 2023",
-    organism: "Codecademy",
+    organism: "Atlasian",
     copy: null,
     link: "https://coursera.org/share/0acd3eb751a07fc5f34a1edbffb96e30",
     skills: [
