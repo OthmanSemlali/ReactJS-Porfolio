@@ -11,6 +11,7 @@ const Head = styled.header`
   background-image: url(${bgUrl});
   background-size: cover;
   background-position: center;
+  background-color: black; 
 
   width: 100%;
   display: flex;

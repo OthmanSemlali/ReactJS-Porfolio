@@ -72,16 +72,37 @@ export const projects = [
 
 export const formations = [
   {
+    school: " ALX Africa",
+    dates: "2023 — Current",
+
+    open: true,
+  },
+  {
     school: " ISTA NTIC2",
-    dates: "2021 — Current",
+    dates: "2021 — 2023",
     // position: "My position",
     copy: "The OFPPT Institute is a renowned technical and professional training institution in Morocco that offers a range of programs. I was honored to be a part of the Full Stack Web Development option as a full stack web developer. During my time at the OFPPT Institute, I deepened my knowledge and understanding of web development, and sharpened my skills in both back-end programming and front-end programming, as well as in agile methodologies and design tools.",
     // jobFeatures: ["feature1", "feature2"],
-    open: true,
+    open: false,
   },
 ];
 
 export const certifications = [
+  {
+    title: "Agile with Atlassian Jira",
+    dates: "July 2023",
+    organism: "Codecademy",
+    copy: null,
+    link: "https://coursera.org/share/0acd3eb751a07fc5f34a1edbffb96e30",
+    skills: [
+      "Project Management",
+      "Jira Software",
+      "Scrum",
+      "Kanban",
+      "Agile Methodologies",
+    ],
+    open: true,
+  },
   {
     title: "Learn MongoDB Course",
     dates: "February 2023",
@@ -94,7 +115,7 @@ export const certifications = [
       "MongoDB Indexing",
       "MongoDB Aggregation",
     ],
-    open: true,
+    open: false,
   },
   {
     title: "AJAX Fundamentals",
