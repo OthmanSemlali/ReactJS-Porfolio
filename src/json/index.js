@@ -6,7 +6,7 @@ export const greeting = {
   companyURL: "#",
   subtitle: "My subtitle",
   copy: "I'm a student at",
-  subCopy: "Junior Full stack web developer",
+  subCopy: "Full stack web developer",
   // on a journey towards becoming an expert in building end-to-end web solutions using modern technologies
 };
 
