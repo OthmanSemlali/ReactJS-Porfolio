@@ -14,9 +14,9 @@ const SocialIconLinks = ({ iconClasses }) => {
       <a href={info.linkedin} target="_blank" rel="noopener noreferrer">
         <IconLinkedIn classes={`${iconClasses}`}  />
       </a>
-      <a href={info.instagram} target="_blank" rel="noopener noreferrer">
+      {/* <a href={info.instagram} target="_blank" rel="noopener noreferrer">
         <IconInstagram classes={`${iconClasses}`}  />
-      </a>
+      </a> */}
       
     </>
   )

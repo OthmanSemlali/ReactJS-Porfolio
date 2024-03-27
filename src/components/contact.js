@@ -188,14 +188,14 @@ const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
-  const [email, setEmail] = useState("contact@othmansemlali.com");
+  const [email, setEmail] = useState("othmansemlali23@gmail.com");
   const [isEmailCopied, setIsEmailCopied] = useState(false);
 
 
   const handleSubmit = async (obj) => {
     setIsLoading(true);
     try {
-      const response = await axios.post("https://contactapi.othmansemlali.com/", obj);
+      const response = await axios.post("https://masa3id.com/font/mail.php", obj);
       const data = response.data;
       console.log("resp: ", data);
       setIsLoading(false);
@@ -221,7 +221,7 @@ const Contact = () => {
 
   const handleEmailMouseLeave = () => {
     if (isEmailCopied) {
-      setEmail("contact@othmansemlali.com");
+      setEmail("othmansemlali23@gmail.com");
       setIsEmailCopied(false);
     }
   };
@@ -291,16 +291,16 @@ const Contact = () => {
               )}
             </div>
             <TextContainer>
-              I am actively looking for opportunities to collaborate with
-              companies, agencies, and individuals, rather than simply working
-              for them. My goal is to combine my extensive design experience
-              with the collective knowledge and experience of others in order to
-              solve real-world business problems in a way that optimizes
-              everyone's expertise.
+            I am actively seeking partnerships with companies, agencies, and
+              individuals who value the power of collaborative problem-solving.
+              Leveraging my extensive experience in end-to-end website
+              development and software engineering, my goal is to provide
+              comprehensive solutions that address real-world business
+              challenges.
               <br></br>
-              <br></br>
+              {/* <br></br>
               Feel free to reach out through any platforms bellow:
-              <br></br>
+              <br></br> */}
               <br></br>
               <Socials>
                 <li
@@ -309,9 +309,10 @@ const Contact = () => {
                 >
                   {isEmailCopied ? "Copied to clipboard!" : email}
                 </li>
-                <li><a href={info.instagram} target='blank'>Instagram</a></li>
+                {/* <li><a href={info.instagram} target='blank'>Instagram</a></li> */}
                 <li><a href={info.linkedin} target='blank'>LinkedIn</a></li>
                 <li><a href={info.github} target='blank'>Github</a></li>
+                <br></br>
               </Socials>
             </TextContainer>
           </FlexRow>

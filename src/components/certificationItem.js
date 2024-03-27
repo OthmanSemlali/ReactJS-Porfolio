@@ -17,6 +17,7 @@ const CertificationContainer = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 900px;
+  z-index: 1;
 
   &.open {
     .description {

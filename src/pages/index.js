@@ -11,10 +11,7 @@ import FormationCertifs from "../components/FormationCertifs";
 import Home from "../components/SharedLayout";
 
 import { greeting, projects, formations, certifications,ErrorData} from "../json";
-
-
-
-
+import Landing from "./landing";
 
 
 
@@ -22,14 +19,15 @@ const IndexPage = () => (
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<Home />}>
-        <Route index element={<Header data={greeting} />} />
+        <Route index element={<Landing />} />
+        {/* <Route index element={<Header data={greeting} />} /> */}
         <Route path="projects" element={<Projects scrollDown={true} data={projects} />} />
         <Route path="formation" element={<FormationCertifs
           formations={formations}
           certifications={certifications}
         />} />
         
-        <Route path="contact" element={<Contact data={projects} />}></Route>
+        <Route path="contact" element={<Contact />}></Route>
         <Route path="*" element={<Header headsData = {ErrorData} />} />
       </Route>
     </Routes>

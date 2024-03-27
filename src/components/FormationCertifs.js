@@ -23,9 +23,6 @@ const FormationCertifsContainer = styled.div`
 const FormationCertifs = (props) => {
 
 
-
-
-
   return (
     <>
     <Header headsData={formationPage} scrollDown={true} />
