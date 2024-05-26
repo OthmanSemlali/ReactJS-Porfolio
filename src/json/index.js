@@ -13,7 +13,7 @@ export const greeting = {
 export const info = {
   github: "https://github.com/OthmanSemlali",
   linkedin: "https://www.linkedin.com/in/othman-semlali-dev/",
-  instagram: "https://www.instagram.com/uthmeene/",
+  // instagram: "https://www.instagram.com/uthmeene/",
 };
 
 export const formationPage = {
@@ -38,7 +38,7 @@ export const projects = [
     description:
       "BookyReview is a complete, end-to-end blog CMS project that allows users to share and discover book reviews. With a user-friendly interface, this platform provides a space for book lovers to connect and express their thoughts on the books they have read.",
     techList: ["PHP", "MySQL", "jQuery", "CSS"],
-    img: "https://bookyreview.space/admin/upload/logo.png",
+    img: "https://masa3id.com/font/logo.png",
     siteLink: "https://bookyreview.space/",
     codeLink: "https://github.com/OthmanSemlali/BookyReview-BLOG",
     featured: true,
@@ -50,11 +50,11 @@ export const projects = [
     description:
       "ShareProjects is a website that allows users to create profiles and share their projects with other users. ",
     techList: ["PHP", "MVC", "JQuery", "Bootstrap5"],
-    img: "https://bookyreview.space/admin/upload/php.png",
+    img: "https://masa3id.com/font/php.png",
     codeLink: null,
     siteLink: null,
     featured: false,
-    soon: true,
+    soon: false,
   },
   {
     title: "KeepReading",
@@ -62,27 +62,35 @@ export const projects = [
     description:
       "E-commerce platform for selling books. The platform features a comprehensive catalog of books..",
     techList: ["React.js", "Emotion", "API", "PHP"],
-    img: "https://bookyreview.space/admin/upload/reactjs.png",
+    img: "https://masa3id.com/font/reactjs.png",
     codeLink: null,
     siteLink: null,
     featured: false,
-    soon: true,
+    soon: false,
   },
 ];
 
 export const formations = [
   {
-    school: " ALX Africa",
-    dates: "2023 — Current",
+    school: " ARK-x Talent Factory",
+    dates: "January 2024 — Current",
+    copy:"A focused bootcamp specializing in the MERN stack (MongoDB, Express.js, React, Node.js)." ,
 
     open: true,
+  },
+  {
+    school: " ALX Africa",
+    dates: "2023 — Current",
+    copy: "ALX is a leadership development platform that is designed to help young leaders develop the skills and networks they need to make a difference in the world. I am currently enrolled in the ALX Africa program, where I am learning to become a Software Engineer.",
+
+    open: false,
   },
   {
     school: " Specialized Institute Of Applied Technology NTIC 2",
     dates: "2021 — 2023",
     // position: "My position",
-    copy: "The OFPPT Institute is a renowned technical and professional training institution in Morocco that offers a range of programs. I was honored to be a part of the Full Stack Web Development option as a full stack web developer. During my time at the OFPPT Institute, I deepened my knowledge and understanding of web development, and sharpened my skills in both back-end programming and front-end programming, as well as in agile methodologies and design tools.",
-    // jobFeatures: ["feature1", "feature2"],
+    copy: "The OFPPT Institute is a renowned technical and professional training institution in Morocco that offers a range of programs. I was honored to be a part of the Full Stack Web Development option as a full stack web developer.",
+    jobFeatures: ["feature1", "feature2"],
     open: false,
   },
 ];

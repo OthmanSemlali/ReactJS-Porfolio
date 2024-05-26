@@ -1,14 +1,14 @@
-import React from 'react'
-import { Global, css } from '@emotion/core'
-import { theme, media } from '../styles'
+import React from "react";
+import { Global, css } from "@emotion/core";
+import { theme, media } from "../styles";
 
 const GlobalStyles = () => {
   return (
     <Global
-    styles={css`
-
+      styles={css`
+      
       html {
-        background-color: ${theme.colors.darkBlue};
+        // background-color: ${theme.colors.darkBlue};
       }
 
       h1 {
@@ -317,7 +317,7 @@ const GlobalStyles = () => {
       }
     `}
     />
-  )
-}
+  );
+};
 
-export default GlobalStyles
+export default GlobalStyles;

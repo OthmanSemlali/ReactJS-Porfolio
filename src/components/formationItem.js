@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "@emotion/styled";
 import { theme, media } from "../styles";
 import arrow from "../images/arrow.svg";
-// import rewind from '../images/rewind.svg'
+import rewind from '../images/rewind.svg'
 import bgUrl from "../images/space.png";
 
 const FormationContainer = styled.div`
@@ -17,6 +17,7 @@ const FormationContainer = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 900px;
+  z-index: 1;
 
   &.open {
     .description {
@@ -77,46 +78,46 @@ const Dates = styled.p`
   color: ${theme.colors.lightGray};
 `;
 
-// const Copy = styled.p`
-//   color: ${theme.colors.light};
-// `
+const Copy = styled.p`
+  color: ${theme.colors.light};
+`
 
-// const Tech = styled.ul`
+const Tech = styled.ul`
 
-//   columns: 2;
-//   max-width: 500px;
-//   list-style-type: none;
+  columns: 2;
+  max-width: 500px;
+  list-style-type: none;
 
-//   li {
-//     color: ${theme.colors.light};
-//     margin-bottom: 5px;
-//     position: relative;
-//     padding-left: 20px;
+  li {
+    color: ${theme.colors.light};
+    margin-bottom: 5px;
+    position: relative;
+    padding-left: 20px;
 
-//     &::before {
+    &::before {
 
-//       color: ${theme.colors.light};
-//       position: absolute;
-//       left: 0;
-//       height: 12px;
-//       width: 12px;
-//       top: 0;
-//       bottom: 0;
-//       margin: auto;
-//       background-image: url('${rewind}');
-//       background-size: 12px;
-//       background-repeat: no-repeat;
-//       content : '';
-//     }
-//   }
+      color: ${theme.colors.light};
+      position: absolute;
+      left: 0;
+      height: 12px;
+      width: 12px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      background-image: url('${rewind}');
+      background-size: 12px;
+      background-repeat: no-repeat;
+      content : '';
+    }
+  }
 
-//   ${media.small} {
-//     padding-left: 0;
-//   }
+  ${media.small} {
+    padding-left: 0;
+  }
 
-// `
+`
 
-const Project = React.forwardRef(
+const FormationItem = React.forwardRef(
   ({ dates, copy, school, classes = "", open }, ref) => {
     const [isOpen, updateIsOpen] = useState(open);
 
@@ -133,11 +134,12 @@ const Project = React.forwardRef(
         </FirstRow>
         <SecondRow className="description">
           <Dates>{dates}</Dates>
-          {/* <Copy>{copy}</Copy> */}
+          <Copy>{copy}</Copy>
+          <Tech></Tech>
         </SecondRow>
       </FormationContainer>
     );
   }
 );
 
-export default Project;
+export default FormationItem;

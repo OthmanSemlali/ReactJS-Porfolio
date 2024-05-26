@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import styled from "@emotion/styled";
 import Formsy from "formsy-react";
-import { Container, Section, theme, media } from "../styles";
-import FormsyInput from "./formsyInput";
-import FormsyTextArea from "./formsyTextArea";
-import Header from "./header";
+import { Container, Section, theme, media } from "../../styles";
+// import FormsyInput from "./formsyInput";
+// import formsyTextArea from "./formsyTextArea";
 import axios from "axios";
-import Footer from "./footer";
-import { contactPage, info } from "../json";
+
+import { contactPage, info } from "../../json";
+import FormsyInput from "../formsyInput";
+import FormsyTextArea from "../formsyTextArea";
 
 const Socials = styled.ul`
   max-width: 500px;
@@ -36,17 +37,14 @@ const Socials = styled.ul`
       background-repeat: no-repeat;
       content: "";
     }
-    a{
+    a {
       text-decoration: none;
-    color: ${theme.colors.dark};
+      color: ${theme.colors.dark};
 
-
-
-      &:hover{
+      &:hover {
         text-decoration: none;
       }
     }
-   
   }
   li:hover {
     color: #0c4d6b;
@@ -184,18 +182,20 @@ const FormContainer = styled.div`
   }
 `;
 
-const Contact = () => {
+const ContactSection = () => {
   const [submitted, setSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const [email, setEmail] = useState("othmansemlali23@gmail.com");
   const [isEmailCopied, setIsEmailCopied] = useState(false);
 
-
   const handleSubmit = async (obj) => {
     setIsLoading(true);
     try {
-      const response = await axios.post("https://masa3id.com/font/mail.php", obj);
+      const response = await axios.post(
+        "https://masa3id.com/font/mail.php",
+        obj
+      );
       const data = response.data;
       console.log("resp: ", data);
       setIsLoading(false);
@@ -213,7 +213,6 @@ const Contact = () => {
     }
   };
 
-
   const handleEmailClick = () => {
     navigator.clipboard.writeText(email);
     setIsEmailCopied(true);
@@ -221,15 +220,13 @@ const Contact = () => {
 
   const handleEmailMouseLeave = () => {
     if (isEmailCopied) {
-      setEmail("othmansemlali23@gmail.com");
+      setEmail("othmansemlali23@mail.com");
       setIsEmailCopied(false);
     }
   };
 
   return (
     <>
-      <Header headsData={contactPage} scrollDown={true} />
-
       <Section bgColor={theme.colors.light} id="contact">
         <Container>
           <Title>Contact.</Title>
@@ -291,17 +288,17 @@ const Contact = () => {
               )}
             </div>
             <TextContainer>
-            I am actively seeking partnerships with companies, agencies, and
+              I am actively seeking partnerships with companies, agencies, and
               individuals who value the power of collaborative problem-solving.
               Leveraging my extensive experience in end-to-end website
               development and software engineering, my goal is to provide
               comprehensive solutions that address real-world business
               challenges.
               <br></br>
-              {/* <br></br>
-              Feel free to reach out through any platforms bellow:
+             <br></br>
+              {/*  Feel free to reach out through any platforms bellow:
               <br></br> */}
-              <br></br>
+              {/* <br></br> */}
               <Socials>
                 <li
                   onClick={handleEmailClick}
@@ -309,18 +306,29 @@ const Contact = () => {
                 >
                   {isEmailCopied ? "Copied to clipboard!" : email}
                 </li>
-                {/* <li><a href={info.instagram} target='blank'>Instagram</a></li> */}
-                <li><a href={info.linkedin} target='blank'>LinkedIn</a></li>
-                <li><a href={info.github} target='blank'>Github</a></li>
+                {/* <li>
+                  <a href={info.instagram} target="blank">
+                    Instagram
+                  </a>
+                </li> */}
+                <li>
+                  <a href={info.linkedin} target="blank">
+                    LinkedIn
+                  </a>
+                </li>
+                <li>
+                  <a href={info.github} target="blank">
+                    Github
+                  </a>
+                </li>
                 <br></br>
               </Socials>
             </TextContainer>
           </FlexRow>
         </Container>
       </Section>
-      <Footer></Footer>
     </>
   );
 };
 
-export default Contact;
+export default ContactSection;

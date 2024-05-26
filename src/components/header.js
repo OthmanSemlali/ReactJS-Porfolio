@@ -5,6 +5,10 @@ import bgUrl from "../images/earth.png";
 import { Container, theme, media } from "../styles";
 import scroll from "../images/sc.gif";
 import { Link } from "react-router-dom";
+import Project from "./project";
+import { projects } from "../json";
+import ProductsSection from "./innerComponents/projectsSection";
+import Typist from 'react-typist';
 
 const Head = styled.header`
   height: 100vh;
@@ -55,6 +59,8 @@ const Icon = styled.div`
 const HeaderText = styled.h1`
   margin-bottom: 5px;
   max-width: 900px;
+  letter-spacing: 4px;
+
   ${media.medium} {
     max-width: 700px;
   }
@@ -69,15 +75,22 @@ const HeaderTitle = styled.h5`
   color: ${theme.colors.gray};
   max-width: 480px;
   margin-bottom: 10px;
+  letter-spacing: 1px;
 
   ${media.medium} {
     font-size: 18px;
   }
 `;
 
-const Header = ({ data, headsData, scrollDown }) => {
+const Header = ({ data, headsData, scrollDown, typing }) => {
   const [isMounted, setIsMounted] = useState(false);
   const iconRef = useRef(null);
+
+  const sentences = [
+    'Full Stack Developer',
+    'MERN Stack Developer',
+    'Junior Software Engineer',
+  ];
 
   useEffect(() => {
     setTimeout(() => setIsMounted(true), 1000);
@@ -106,10 +119,19 @@ const Header = ({ data, headsData, scrollDown }) => {
       {headsData ? headsData.subTitle : data.name}
     </HeaderText>
   );
+  const [count, setCount] = useState(0);
 
+  const handleTypingDone = () => {
+    setCount((count + 1) % sentences.length);
+  };
   const three = () => (
     <HeaderTitle style={{ transitionDelay: "300ms" }}>
-      {headsData ? headsData.subCopy : data.subCopy}
+      {/* {headsData ? headsData.subCopy : data.subCopy} */}
+     { typing && (<Typist key={count} onTypingDone={handleTypingDone}>
+        {sentences[count]}
+        <Typist.Delay ms={500} />
+        <Typist.Backspace count={sentences[count].length} delay={20} />
+      </Typist>)}
     </HeaderTitle>
   );
 
@@ -135,6 +157,7 @@ const Header = ({ data, headsData, scrollDown }) => {
         </Container>
         {scrollDown ? <Icon ref={iconRef}></Icon> : null}
       </Head>
+      {/* <ProductsSection data={projects} /> */}
     </>
   );
 };
